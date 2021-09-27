@@ -43,7 +43,7 @@ def main():
                 "Period 2": pd2_students,
     }
 
-    print(STUDENTS)
+    #print(STUDENTS)
 
     # Randomly select a key from the dictionary
     period = random.choice(list(STUDENTS.values()))
