@@ -1,3 +1,8 @@
+# Andrew Juang
+# SoftDev
+# Program To Print A Random SoftDev Student's Name
+# 2021-09-27                                           
+
 # SUMMARY OF DISCUSSION:
 # We discussed about Hebe's code with importing Github into Python with PyGithub.
 # We soon found out that there were many issues involving the API and installing
