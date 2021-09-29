@@ -15,7 +15,6 @@ def randomJob(reader):
 
         # Find where the x falls in the class/job intervals
         for i in reader:
-                print(reader[i])
                 y += reader[i] * 10
                 if (y > x):
                         print(i)
