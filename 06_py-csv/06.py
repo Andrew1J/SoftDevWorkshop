@@ -1,15 +1,30 @@
-# Andrew Juang
+# The Best Team: Andrew Juang, Alif Abdullah, Joshua Kloepfer
 # SoftDev
-# K06 Reading in CSV File
-# 2021-09-28
+# K06 -- Weighted Occupation Picker
+# 2021-9-28
 
 import csv
+import random
 
-file = open("occupations.csv")
-lines = csv.reader(file)
-next(lines)
+finalDict = {}
 
-OCCUPATIONS = {}
-for line in lines:
-    OCCUPATIONS[line[0]] = float(line[1])
-print(OCCUPATIONS)
+def randomJob(reader):
+        # Pick some random int x (0,1000)
+        x = random.randint(0, 1000)
+        y = 0
+
+        # Find where the x falls in the class/job intervals
+        for i in reader:
+                print(reader[i])
+                y += reader[i] * 10
+                if (y > x):
+                        print(i)
+                        break
+
+# Read in CSV file
+with open('occupations.csv', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+                finalDict[row['Job Class']] = float(row['Percentage'])
+
+randomJob(finalDict)
