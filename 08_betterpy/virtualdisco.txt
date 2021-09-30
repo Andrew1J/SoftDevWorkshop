@@ -2,3 +2,16 @@ Intel Sucks : Andrew Juang, Andy Lin, Jonathan Wu
 SoftDev
 K08 -- Cross Pollination and Virtual Insanity
 2021-9-30
+
+Investigating: $ python3 -m venv ~/myherozero
+
+python3 - calls the appropriate version of python (opposed to python2)
+
+-m - calls the program to access main
+
+venv - stands for virtual environment and is used to install Python packages for
+       different projects without installing the packages globally. The installation
+       of python packages is isolated so they possibly don't conflict with other
+       packages in other projects.
+
+~/myherozero - "~/" specifies the home directory of your project "myherozero"
