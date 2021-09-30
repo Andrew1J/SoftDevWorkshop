@@ -1,0 +1,15 @@
+Intel Sucks : Andrew Juang, Andy Lin, Jonathan Wu
+SoftDev
+K08 -- Cross Pollination and Virtual Insanity
+2021-9-30
+
+Questions:
+- How and what do you use the pandas library for?
+- What are the benefits of downloading the csv from the url rather than storing the file locally?
+
+Comments:
+- Using random.choices() to weight the percentages seems to be the shortest method.
+- DictReader seems to be a good method of reading in the CSV file.
+
+Concerns:
+- n/a
