@@ -4,6 +4,12 @@ The Best Team - Alif Abdullah, Andrew Juang, Joshua Kloepfer </br>
 2021-09-29 </br>
 
 ## File Handling
+```python
+with open('occupations.csv', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+                finalDict[row['Job Class']] = float(row['Percentage'])
+```
 - We used the csv module's DictReader function to convert the csv file into a dictionary. 
 - We opened up the csv file with the "with open" keywords. 
 - We stored the contents of the csv file in the variable reader. 
@@ -20,6 +26,19 @@ The Best Team - Alif Abdullah, Andrew Juang, Joshua Kloepfer </br>
 - Here is a helpful guide : https://guides.github.com/features/mastering-markdown/
 
 ## Weighted Randomized Selection
+```python
+def randomJob(reader):
+        # Pick some random int x (0,1000)
+        x = random.randint(0, 1000)
+        y = 0
+
+        # Find where the x falls in the class/job intervals
+        for i in reader:
+                y += reader[i] * 10
+                if (y > x):
+                        print(i)
+                        break
+```
 - We randomly generated a number from 0 to 1000, and stored it into the variable x.
 - We then iterated through the function parameter reader, a dictionary. 
 - We then added each of the value elements, times 10 (this is done to accomodate the fact that a random number is chosen out of 1000), to the variable y, initialized to 0. 
