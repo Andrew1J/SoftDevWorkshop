@@ -1,0 +1,18 @@
+The Best Team - Alif Abdullah, Andrew Juang, Joshua Kloepfer
+SoftDev
+K11 -- Basics of /static Folder
+2021-10-06
+
+NOTABLES:
+- The foo file (not foo.html) in the static folder has no file extension.
+- The foo file is a plaintext file, when you cat it in the terminal it displays
+the text.
+- http://localhost:5000/static/foo is not a html page so it won't display a webpage
+so we predict it will just try to open the foo file.
+- foo.html seems to be a webpage accessible by the /foo.html webpage. In app.py
+you might be able to @app.route() a function to foo.html to also edit the webpage
+- app.py has access to static folder.
+
+RESULTS:
+- Upon entering the commented web link, it prompts you to open the foo file as a plain text file.
+- foo.html displays the webpage with the words as expected at http://localhost:5000/static/foo.html
