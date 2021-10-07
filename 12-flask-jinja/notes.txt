@@ -1,0 +1,10 @@
+The Best Team - Alif Abdullah, Andrew Juang, Joshua Kloepfer
+SoftDev
+K12 --
+2021-10-07
+
+Q0: What happens if you remove render_template from this line?
+It says render_template is not defined because you call render_template in the
+test_templt() funciton, but that function is not defined.
+
+Q1: Can all of your teammates confidently predict the URL to use to load this page?
