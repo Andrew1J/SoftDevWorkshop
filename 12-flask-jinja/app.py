@@ -1,6 +1,6 @@
 # The Best Team - Alif Abdullah, Andrew Juang, Joshua Kloepfer
 # SoftDev
-# K12 --
+# K12 -- Rendering Templates 
 # 2021-10-07
 
 from flask import Flask, render_template #Q0: What happens if you remove render_template from this line?
