@@ -25,8 +25,8 @@ with open("./data/occupations.csv") as csvfile:
     # removing last item (because it's Total : 99.8)
     job_class.pop(len(job_class) - 1)
     percentage.pop(len(percentage) - 1)
-  
-def occupations(): #edited to return instead of print
+
+def random_occupation(): #edited to return instead of print
     # job_class is what we want to pick weights are the percentages and we only want to pick once (k=1) then we print whatever job class it was
     randomList = random.choices(job_class, weights=percentage, k=1)
     return(randomList[0])
@@ -37,7 +37,7 @@ def hello_world():
 
 @app.route("/occupyflaskst")
 def test_tmplt():
-    return render_template( 'tablified.html', chosenJob=occupations(), jobClass=job_class, percentage=percentage)
+    return render_template( 'tablified.html', chosenJob=random_occupation(), jobClass=job_class, percentage=percentage)
 
 if __name__ == "__main__":
     app.debug = True

@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <!--
-  Hedgehogs (Andrew Juang, David Chong, Eliza Knapp)
-  SoftDev
-  K13 -- Template for Success
-  2021-10-08
- -->
+Hedgehogs (Andrew Juang, David Chong, Eliza Knapp)
+SoftDev
+K13 -- Template for Success
+2021-10-08
+-->
 
 <html>
 
-  <head>
-    <title> page </title>
-  </head>
+<head>
+    <title>Weighted Random Occupation Picker</title>
+</head>
 
-  <body>
-    <h1>{{chosenJob}}</h1>
-    <table>
-      <tr>
-        <th>Job Class</th>
-        <th>Percentage</th>
-      </tr>
+<body>
+    <h1>Weighted Random Occupation Chooser</h1>
+    <h2>Hedgehogs (Andrew Juang, David Chong, Eliza Knapp)</h2>
+    <p><b>What it does:</b> The randomly chosen occupation is weighted by the percentage given.</p>
+    <p><b>Randomly Chosen Occupation:</b> {{chosenJob}}</p>
+    <table border=1>
+        <tr>
+            <th>Job Class</th>
+            <th>Percentage</th>
+        </tr>
+        {% for i in range(jobClass|length) %}
+        <tr>
+            <td>{{jobClass[i]}}</td>
+            <td>{{percentage[i]}}</td>
+        </tr>
+        {% endfor %}
     </table>
-    {% for item}
-    <h2>{{jobClass}}</h2>
-     <br>
-  </body>
+    <br>
+</body>
 
 </html>
