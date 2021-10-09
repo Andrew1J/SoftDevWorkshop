@@ -19,13 +19,13 @@ K13 -- Template for Success
     <p><b>Randomly Chosen Occupation:</b> {{chosenJob}}</p>
     <table border=1>
         <tr>
-            <th>Job Class</th>
+            <th>Occupation</th>
             <th>Percentage</th>
         </tr>
-        {% for i in range(jobClass|length) %}
+        {% for occupation,percentage in jobClass.items() %}
         <tr>
-            <td>{{jobClass[i]}}</td>
-            <td>{{percentage[i]}}</td>
+            <td>{{occupation}}</td>
+            <td>{{percentage}}</td>
         </tr>
         {% endfor %}
     </table>
