@@ -15,7 +15,7 @@ K13 -- Template for Success
 <body>
     <h1>Weighted Random Occupation Chooser</h1>
     <h2>Hedgehogs (Andrew Juang, David Chong, Eliza Knapp)</h2>
-    <p><b>What it does:</b> The randomly chosen occupation is weighted by the percentage given.</p>
+    <p><b>What it does:</b> The randomly chosen occupation is weighted by the percentage given. Refresh the page for a new occuptation! </p>
     <p><b>Randomly Chosen Occupation:</b> {{chosenJob}}</p>
     <table border=1>
         <tr>
@@ -24,8 +24,8 @@ K13 -- Template for Success
         </tr>
         {% for occupation,percentage in jobClass.items() %}
         <tr>
-            <td>{{occupation}}</td>
-            <td>{{percentage}}</td>
+            <td><a href ={{percentage[1]}}>{{occupation}}</a></td>
+            <td>{{percentage[0]}}%</td>
         </tr>
         {% endfor %}
     </table>

@@ -16,7 +16,10 @@ def readfile(filepath):
         reader = csv.DictReader(csvfile)
         # add dictionary items
         for line in reader:
-            occupations_dict[line['Job Class']] = float(line['Percentage'])
+            percent_link = []
+            percent_link.append(float(line['Percentage']))
+            percent_link.append(line['Link'])
+            occupations_dict[line['Job Class']] = percent_link
 
     # remove unnecessary item
     occupations_dict.pop('Total')
@@ -27,7 +30,11 @@ def readfile(filepath):
 def random_occupation(occupations):
     # choose random occupation given weights
     occupation_list = list(occupations.keys())
-    weights = occupations.values()
+    values = occupations.values()
+    weights = []
+    for value in values:
+      weights.append(value[0])
+
     choice = random.choices(occupation_list, weights)
 
     return(choice[0])
