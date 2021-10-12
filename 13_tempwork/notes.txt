@@ -15,3 +15,15 @@ convenient
 specify that it is in the data folder
 - we wonder, still, why the last row of the csv file is there. should
 we be using it?!?
+
+EGO:
+- It was interesting to read about the "the code you wrote, instead of
+your code" part.
+- Can relate to parts when you get a bit defensive about your code.
+- Always better to write your code to be more readable, can also prevent
+silly mistakes from happening by having code be more readable.
+- Obvious benefits to working together on debugging code, and even when you are done,
+you can send it to somebody else so that they can read the debugged version and make
+sure that there are no errors.
+- Will be working together on debugging more as a group, as that seems like an
+enormous benefit.
