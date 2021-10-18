@@ -42,11 +42,11 @@ def authenticate():
     print("***DIAG: request.headers ***")
     print(request.headers)
     if request.args['username'] != 'eric' and request.args['password'] != 'guo':
-        return render_template('login.html',input='Username and password are in')
+        return render_template('login.html',input='Username and password are ')
     elif request.args['username'] != 'eric':
-        return render_template('login.html',input='Username is in')
+        return render_template('login.html',input='Username is ')
     elif request.args['password'] != 'guo':
-        return render_template('login.html',input='Password is in')
+        return render_template('login.html',input='Password is ')
     else:
         return render_template('response.html',username=request.args['username'], method=request.method)  #response to a form submission
 

@@ -30,7 +30,9 @@ Peruse this code together and discuss how it should work, in conjunction with th
             <input type="text" name="password"><br>
             <input type="submit" name="sub1">
         </form> <br>
-        <p style="color:red">*{{input}}correct please try again!</p>
+        {% if input|length > 1 %}
+            <p style="color:red">*{{input}}incorrect please try again!</p>
+        {% endif %}
         <br>
 
     </body>
