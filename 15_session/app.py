@@ -24,10 +24,10 @@ def disp_loginpage():
     if len(session) !=0:
         session.pop('eric')
     print(request.headers)
-    return render_template( 'login.html' )
+    return render_template( 'login.html')
 
 
-@app.route("/auth", methods=['GET', 'POST'])
+@app.route("/auth", methods=['GET','POST'])
 def authenticate():
     # print("\n\n\n")
     # print("***DIAG: this Flask obj ***")
@@ -41,25 +41,25 @@ def authenticate():
     # print("***DIAG: request.headers ***")
     print(request.headers)
     if request.method == 'GET':
-        if request.args['username'] != 'eric' and request.args['password'] != 'guo': #if both inputs are wrong tells them both are wrong
+        if request.args.get('username') != 'eric' and request.args.get('password') != 'guo': #if both inputs are wrong tells them both are wrong
             return render_template('login.html',input='Username and password are ')
-        elif request.args['username'] != 'eric': #if only username is wrong, tell them only username is wrong
+        elif request.args.get('username') != 'eric': #if only username is wrong, tell them only username is wrong
             return render_template('login.html',input='Username is ')
-        elif request.args['password'] != 'guo': #if only password is wrong, tell them only password is wrong
+        elif request.args.get('password') != 'guo': #if only password is wrong, tell them only password is wrong
             return render_template('login.html',input='Password is ')
         else:
-            session[request.args['username']] = request.args['password']
-            return render_template('response.html',username=request.args['username'], method=request.method)  #response to a form submission
+            session[request.args.get('username')] = request.args.get('password')
+            return render_template('response.html',username=request.args.get('username'), method=request.method)  #response to a form submission
     elif request.method == 'POST':
-        if request.form['username'] != 'eric' and request.form['password'] != 'guo': #if both inputs are wrong tells them both are wrong
+        if request.form.get('username') != 'eric' and request.form.get('password') != 'guo': #if both inputs are wrong tells them both are wrong
             return render_template('login.html',input='Username and password are ')
-        elif request.form['username'] != 'eric': #if only username is wrong, tell them only username is wrong
+        elif request.form.get('username') != 'eric': #if only username is wrong, tell them only username is wrong
             return render_template('login.html',input='Username is ')
-        elif request.form['password'] != 'guo': #if only password is wrong, tell them only password is wrong
+        elif request.form.get('password') != 'guo': #if only password is wrong, tell them only password is wrong
             return render_template('login.html',input='Password is ')
         else:
-            session[request.form['username']] = request.form['password']
-            return render_template('response.html',username=request.form['username'], method=request.method)  #response to a form submission
+            session[request.form.get('username')] = request.form.get('password')
+            return render_template('response.html',username=request.form.get('username'), method=request.method)  #response to a form submission
 
 
 
