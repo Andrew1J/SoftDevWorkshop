@@ -3,7 +3,7 @@
    K18 -- CSS basics
    2021-11-23 */
 
-container {
+.container {
     font-family : "arial";
     background-color:gray;
     height:400px;
@@ -50,8 +50,7 @@ li {
 }
 
 #dimgray{
-        background-color:dimgray;
-
+    background-color:dimgray;
 }
 
 a{
