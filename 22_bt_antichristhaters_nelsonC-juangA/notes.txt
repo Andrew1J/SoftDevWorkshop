@@ -5,3 +5,5 @@ K22 -- Who Does Frame Work For?
 
 Notes:
 - Don't need to download bootstrap, just insert a link with reference to the boostrap css
+- Very consistent frontend framework thats very lightweight and customizable
+- Things are responsive and it doesn't take long to make a webpage look good
