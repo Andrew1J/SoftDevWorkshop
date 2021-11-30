@@ -1,0 +1,7 @@
+Antichristhaters -- Andrew Juang, Cameron Nelson
+Softdev
+K22 -- Who Does Frame Work For?
+2021-11-30
+
+Notes:
+- Don't need to download bootstrap, just insert a link with reference to the boostrap css
