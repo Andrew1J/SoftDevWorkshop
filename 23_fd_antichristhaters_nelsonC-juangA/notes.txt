@@ -1,0 +1,22 @@
+Anti-Christ Haters -- Cameron Nelson, Andrew Juang
+SoftDev
+K23 - using classmates' reference to learn a framework
+2021-12-01
+
+DISCO:
+- Foundation's grid system seems to be the equivalent of containers in Boostrap
+- Bootstrap seems to include more predefined features.
+
+QCC:
+- The group we looked at used css and js folders, but just like bootstrap, with foundation, you can
+just insert a link referencing foundation to use it.
+- What other features are there unique to Foundation?
+
+
+Q0:
+No
+
+Q1:
+We prefer bootstrap to foundation because we find that bootstrap allows for less effort to
+create good looking sites (more features) whereas foundation seems to be more DIY. Less
+effort on CSS means that we can focus more on the core functionality of the website.
