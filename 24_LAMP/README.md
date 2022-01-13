@@ -67,7 +67,7 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
    ```
    ssh your_username@your_server_ip
    ```
-We should be good to go to install the apache web server! 
+You should be good to go to install the apache web server! 
 
 ### Install the Apache Web Server on Ubuntu 20.04
 
@@ -77,14 +77,11 @@ We should be good to go to install the apache web server!
 * https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04
 * https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
 
-(please verify ; some of these are old links)
-
 ---
 
 Accurate as of (last update): 2022-01-11
 
 #### Contributors:  
-Clyde "Thluffy" Sinclair  
-Topher Mykolyk, pd0  
+Andrew Juang, pd2
 
 _Note: the two spaces after each name are important! ( <--burn after reading)  _
