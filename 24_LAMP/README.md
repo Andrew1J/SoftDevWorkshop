@@ -3,12 +3,27 @@
 ## Overview
 Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apache2 web server on it.
 
-### Estimated Time Cost: _
+### Estimated Time Cost: 30 minutes
 
 ### Prerequisites:
+- A Digital Ocean account with a payment method
+- You are breathing
 
-- Something you should know beforehand...
-- Something you will need installed beforehand...
+
+### Instructions
+#### Set up a Droplet
+##### We will be using SSH keys because password authentication is less secure. 
+1. If you do not have SSH keys create one by typing 
+    ```
+    ssh key-gen
+    ```
+    and copying the contents of the key 
+    ```
+    cat /Users/your_username/.ssh/id_rsa.pub
+    ```
+2. In https://cloud.digitalocean.com/account/security, click Add SSH Key and copy and paste the contents of your ssh key into it. 
+3. Log in to your Digital Ocean account and from the control panel, click Create -> Droplets. We will be using Ubuntu 20.04 with the Basic Plan and Regular Intel with SSD which should cost $5/month. 
+4. Create your droplet!!!
 
 1. Step blah blah blah, and/or...
 1. Step, with `inline code`, and/or...
@@ -29,15 +44,9 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 
 
 ### Resources
-* https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
-* https://www.digitalocean.com/community/questions/error-permission-denied-publickey-when-i-try-to-ssh
-* https://www.digitalocean.com/community/questions/secure-ubuntu-server-for-non-root-user-using-only-ssh-keys?answer=22286
-* https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-18-04-quickstart
-* https://www.digitalocean.com/docs/droplets/how-to/
-* https://www.digitalocean.com/community/questions/error-permission-denied-publickey-when-i-try-to-ssh?answer=44730
-* https://www.digitalocean.com/docs/droplets/how-to/connect-with-ssh/putty/
-* https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-openssh/
-* https://www.digitalocean.com/docs/droplets/how-to/connect-with-ssh/openssh/
+* https://docs.digitalocean.com/tutorials/recommended-droplet-setup/
+* https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04
+* https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
 
 (please verify ; some of these are old links)
 
