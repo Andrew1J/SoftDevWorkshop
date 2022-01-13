@@ -3,7 +3,7 @@
 ## Overview
 Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apache2 web server on it.
 
-### Estimated Time Cost: 30 minutes
+### Estimated Time Cost: 30 minutes - 1 hour
 
 ### Prerequisites:
 - A Digital Ocean account with a payment method
