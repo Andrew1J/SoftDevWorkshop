@@ -1,4 +1,4 @@
-# how-to :: CREATE A DIGITAL OCEAN DROPLET WITH UBUNTU AND APACHE
+# how-to :: PROVISION A DIGITAL OCEAN DROPLET AND INSTALL UBUNTU 20.04.3 AND APACHE2.
 ---
 ## Overview
 Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apache2 web server on it.
@@ -69,6 +69,7 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
    ```
 We should be good to go to install the apache web server! 
 
+### Install the Apache Web Server on Ubuntu 20.04
 
 
 ### Resources
