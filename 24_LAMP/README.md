@@ -10,9 +10,9 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 - You are breathing
 
 
-### Instructions
-#### Set up a Droplet
-##### We will be using SSH keys because password authentication is less secure. 
+## Instructions
+### Set up a Droplet
+#### We will be using SSH keys because password authentication is less secure. 
 1. If you do not have SSH keys create one by typing 
     ```
     ssh key-gen
@@ -25,22 +25,50 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 3. Log in to your Digital Ocean account and from the control panel, click Create -> Droplets. We will be using Ubuntu 20.04 with the Basic Plan and Regular Intel with SSD which should cost $5/month. 
 4. Create your droplet!!!
 
-1. Step blah blah blah, and/or...
-1. Step, with `inline code`, and/or...
-1. Step, with
-    ```
-    generic code block or terminal command
-    ```
-   and/or...
-    ```javascript
-    var foo = "this that JS tho";
-    ```
-   and/or...
-    ```python
-    print("this that Python tho")
-    ```
-   and/or...
-1. Step, with [hyperlink](https://xkcd.com)s...
+### Initial Server Setup With Ubuntu 20.04
+1. Connect to the as the root user (you can find the server ip in the droplets page of your Digital Ocean dashboard)
+   ```
+   ssh root@your_server_ip
+   ```
+3. Once you are logged in as root, we will add a new account to log into instead of root. (replace your_username with your username)
+   ```
+   adduser your_username
+   ```
+4. Grant your account with admin privileges
+   ```
+   usermod -aG sudo your_username
+   ```
+   Now you can use sudo on your new account!
+5. Set up a basic firewall to make sure only connections to certain services are allowed.
+   ```
+   ufw allow OpenSSH
+   ```
+   ```
+   ufw enable
+   ```
+   You can see that SSH connections are allowed by typing
+   ```
+   ufw status
+   ```
+   ```Output
+   Status: active
+
+   To                         Action      From
+   --                         ------      ----
+   OpenSSH                    ALLOW       Anywhere
+   OpenSSH (v6)               ALLOW       Anywhere (v6)
+   ```
+   Currently the firewall is only allowing SSH connections!
+6. You will need a copy of your local public key to use the new account
+   ```
+   rsync --archive --chown=your_username:your_username ~/.ssh /home/your_username
+   ```
+7. You should be able to log into the new user account by typing
+   ```
+   ssh your_username@your_server_ip
+   ```
+We should be good to go to install the apache web server! 
+
 
 
 ### Resources
