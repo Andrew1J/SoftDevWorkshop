@@ -70,13 +70,55 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 You should be good to go to install the apache web server! 
 
 ### Install the Apache Web Server on Ubuntu 20.04
-
+1. Install the Apache2 package.
+   ```
+   sudo apt update
+   ```
+   ```
+   sudo apt install apache2
+   ```
+2. Adjust firewall to allow access to the default web ports
+   ```
+   sudo ufw allow 'Apache'
+   ```
+   Verify the change by typing
+   ```
+   sudo ufw status
+   ```
+   ```
+   Output
+   Status: active
+   To                         Action      From
+   --                         ------      ----
+   OpenSSH                    ALLOW       Anywhere                  
+   Apache                     ALLOW       Anywhere                
+   OpenSSH (v6)               ALLOW       Anywhere (v6)             
+   Apache (v6)                ALLOW       Anywhere (v6)    
+   ```
+3. Check with the systemd init system to make sure the service is running by typing:
+   ```
+   sudo systemctl status apache2
+   ```
+   ```
+   Output
+    ● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2020-04-23 22:36:30 UTC; 20h ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Main PID: 29435 (apache2)
+      Tasks: 55 (limit: 1137)
+     Memory: 8.0M
+     CGroup: /system.slice/apache2.service
+             ├─29435 /usr/sbin/apache2 -k start
+             ├─29437 /usr/sbin/apache2 -k start
+             └─29438 /usr/sbin/apache2 -k start
+   ```
+Go to http://your_server_ip, you should see the default Ubuntu 20.04 Apache web page with a red "It Works!" page. 
 
 ### Resources
 * https://docs.digitalocean.com/tutorials/recommended-droplet-setup/
 * https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04
 * https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
-
 ---
 
 Accurate as of (last update): 2022-01-11
