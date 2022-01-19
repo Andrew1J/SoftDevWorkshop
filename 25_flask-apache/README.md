@@ -89,9 +89,9 @@ OR (if the directory has a requirements.txt)
    @app.route("/")
    def hello():
    	return "Hello, I hate Digital Ocean!"
-    if __name__ == "__main__":
-    	app.run()
-    ```
+   if __name__ == "__main__":
+   	app.run()
+   ```
 3. Install Flask
    ```
    sudo apt-get install python3-pip 
