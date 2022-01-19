@@ -1,3 +1,15 @@
+# how-to :: DEPLOY A FLASK APP ON APACHE2
+---
+## Overview
+Guide to creating a deploying a Flask app on Apache2
+
+### Estimated Time Cost: 30 minutes
+
+### Prerequisites:
+- A Digital Ocean account with a payment method
+- You are breathing
+
+## Instructions (Two Different Methods)
 ### Add your first app on the droplet! 
 1. Clone your workshop repo onto the new machine (use http unless you want to add a key to the VM)
    ```
@@ -52,7 +64,9 @@ OR (if the directory has a requirements.txt)
     ```
 8. Check if the app worked on port 5000 of your droplet (hopefully it does!!)
 
-### Make it run in a nicer place
+
+
+### Deploying Flask app with virtual host
 1. Enable mod_wsgi
    ```
    sudo apt-get install libapache2-mod-wsgi-py3 python-dev
