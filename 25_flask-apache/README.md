@@ -83,6 +83,15 @@ OR (if the directory has a requirements.txt)
    ```
    sudo nano __init__.py 
    ```
+   ```
+   from flask import Flask
+   app = Flask(__name__)
+   @app.route("/")
+   def hello():
+   	return "Hello, I hate Digital Ocean!"
+    if __name__ == "__main__":
+    	app.run()
+    ```
 3. Install Flask
    ```
    sudo apt-get install python3-pip 
