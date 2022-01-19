@@ -160,7 +160,7 @@ You should be able to access your virtual host at your ip.
 * https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
 ---
 
-Accurate as of (last update): 2022-01-11
+Accurate as of (last update): 2022-01-18
 
 #### Contributors:  
 Eliza Knapp, pd2  
