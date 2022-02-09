@@ -1,25 +1,5 @@
-/*
-   your PPTASK:
-   
-   Test drive each bit of code in this file,
-    and insert comments galore, indicating anything
-     you discover,
-    	have questions about,
-    		or otherwise deem notable.
-    		
-    		Write with your future self or teammates in mind.
-    		
-    		If you find yourself falling out of flow mode, consult 
-    		other teams
-    		MDN
-
-   A few comments have been pre-filled for you...
-   
-   (delete this block comment once you are done)
-*/
-
 // Team HAM :: Andrew Juang, Hebe Huang, Michelle Lo 
-// SoftDev pd0
+// SoftDev pd2
 // K28 -- Getting more comfortable with the dev console and the DOM
 // 2022-02-08t
 // --------------------------------------------------
@@ -83,7 +63,8 @@ let red = function() {
     console.log(items[i].classList) // prints the classes of li tags
   }
 };
-red();
+
+red(); // only changes items 1, 8, and 9 because blue and green have precedence over red
 
 let stripe = function() {
   let items = document.getElementsByTagName("li");
@@ -98,5 +79,43 @@ let stripe = function() {
 
 //insert your implementations here for...
 // FIB
+let fib = function(n){
+    if(n <= 1){
+      return n;
+    }
+    return fib(n-1) + fib(n-2);
+  };
+
 // FAC
+var fact = function(n){
+    if(n == 0){
+    return 1;
+    }
+    return fact(n-1) * n;
+};
+
 // GCD
+let gcd = function (a, b) {
+    if (a == 0) return b;
+    if (b == 0) return a;
+    while (1) {
+        if (b > a) {
+            b %= a;
+        } else {
+            a %= b;
+        }
+        if (a == 0) return b;
+        if (b == 0) return a;
+    }
+}
+console.log(gcd(12, 6));
+
+
+let fibEx = fib(10);
+addItem("The 10th fibonacci number is " + fibEx); 
+
+let factEx = fact(10);
+addItem("10! = " + factEx); 
+
+let gcdEx = gcd(990, 99);
+addItem("GCD of 990 and 99 is " + gcdEx); 
