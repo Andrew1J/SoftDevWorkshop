@@ -11,7 +11,7 @@ var mode = "rect";
 var toggleMode = (e) => {
     console.log("toggling...");
     if (mode=="rect") {
-        mode = "circ";
+        mode = "circle";
     } else {
         mode = "rect";
     }
@@ -21,18 +21,32 @@ var drawRect = function(e) {
     var mouseX = e.offsetX;
     var mouseY = e.offsetY;
     console.log("mouseclick registered at ", mouseX, mouseY);
+
+    ctx.beginPath();
+    ctx.rect(mouseX, mouseY, 100, 150);
+    ctx.fillStyle = "red";
+    ctx.fill();
 }
 
 var drawCircle = function(e) {
+    var mouseX = e.offsetX;
+    var mouseY = e.offsetY;
     console.log("mouseclick registered at ", mouseX, mouseY);
+
+    ctx.beginPath();
+    ctx.arc(mouseX, mouseY, 50, 0, 360);
+    ctx.fillStyle = "red";
+    ctx.fill();
 }
 
 var draw = (e) => {
-    togglemode(e);
+    if (mode=="rect") drawRect(e);
+    if (mode=="circle") drawCircle(e);
 }
 
-var wipecanvas = (e) => {
-
+var wipeCanvas = (e) => {
+    console.log("wiping canvas...");
+    ctx.clearRect(0,0,c.clientWidth,c.clientHeight);
 }
 
 c.addEventListener("click", draw);
