@@ -6,9 +6,9 @@
 // model for HTML5 canvas-based animation
 
 //access canvas and buttons via DOM
-var c = document.getElementsByID("playground");
-var dotButton = document.getElementByID("buttonCircle");
-var stopButton = document.getElementByID("buttonStop");
+var c = document.getElementById("playground");
+var dotButton = document.getElementById("buttonCircle");
+var stopButton = document.getElementById("buttonStop");
 
 //prepare to interact with canvas in 2D
 var ctx = c.getContext("2d");
@@ -34,13 +34,24 @@ var growing = true;
 var drawDot = () => {
     console.log("drawDot invoked...")
 
-    window.requestAnimationFrame();
-    
-    while (requestID == True) {
-        clear();
-        ctx.beginPath();
-        ctx.arc(mouseX, mouseY, radius, 0, 360);
+    window.cancelAnimationFrame(requestID);
+    requestID = window.requestAnimationFrame(drawDot);
+
+    clear();
+    ctx.beginPath();
+
+    if (radius == c.clientWidth/2 || radius < 0) {
+        growing = !growing;
+    } 
+
+    if (growing) {
+        radius += 2;
+    } else {
+        radius -= 2;
     }
+
+    ctx.arc(c.clientWidth/2, c.clientHeight/2, radius, 0, 360);
+    ctx.fill();
 
     // YOUR CODE HERE
 
@@ -62,6 +73,7 @@ var stopIt = () => {
     console.log("stopIt invoked...")
     console.log(requestID);
 
+    window.cancelAnimationFrame(requestID);
     // YOUR CODE HERE
     /*
       ...to
