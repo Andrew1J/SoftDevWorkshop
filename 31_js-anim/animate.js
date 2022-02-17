@@ -1,7 +1,7 @@
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-// SoftDev pd0
-// K31 -- canvas based JS animation
-// 2022-02-15t
+// HAM 
+// Softdev pd2
+// k31 -- Paint Paint Paint
+// 2022-02-15m
 
 // model for HTML5 canvas-based animation
 
