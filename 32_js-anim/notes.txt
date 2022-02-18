@@ -1,16 +1,11 @@
-HAM 
+Komodo Hedgehogs 
 Softdev pd2
-k31 -- Paint Paint Paint
-2022-02-15m
+k32 -- More Moving Parts
+2022-02-17m
 
-requestID
-	- global variable
-
-window.requestAnimationFrame(callback)
-	- Tells the browser to preform the callback function and prepare the next frame in the animation
-	- Should be called before each repaint
-	- Uses recursion to continuously update the animation
-	- Returns/updates requestID, which is used to stop the animation in window.cancelAnimationFrame().
-
-window.cancelAnimationFrame(requestID)
-	- Stops the animation
+- Can just call Math library without importing anything
+- Call Image constructor to create an image 
+    - Can access properties of the object with a "." (IMG.width)
+- ctx.drawImage() to draw the image on the canvas
+- Separated the x and y velocities so it bounces off the wall
+- Created a stopped boolean so that it moves to a random location everytime you start/stop it

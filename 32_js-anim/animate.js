@@ -1,7 +1,7 @@
-// HAM 
+// Komodo Hedgehogs 
 // Softdev pd2
-// k31 -- Paint Paint Paint
-// 2022-02-15m
+// k32 -- More Moving Parts
+// 2022-02-17m
 
 // model for HTML5 canvas-based animation
 
@@ -37,6 +37,8 @@ var drawDot = () => {
     window.cancelAnimationFrame(requestID);
     requestID = window.requestAnimationFrame(drawDot);
 
+    stopped = true;
+
     clear();
     ctx.beginPath();
 
@@ -54,23 +56,32 @@ var drawDot = () => {
     ctx.fill();
 };
 
+var stopped = false;
 
 var stopIt = () => {
     console.log("stopIt invoked...")
     console.log(requestID);
+    stopped = true;
 
     window.cancelAnimationFrame(requestID);
 };
 
 
-var DVD = new Image(50, 100);
-DVD.src = 'picture.png';
+var DVD = new Image(80, 40);
+DVD.src = 'logo_dvd.jpg';
 var x = Math.floor(Math.random() * (500-DVD.width));
 var y = Math.floor(Math.random() * (500-DVD.height));
 var dx = 5 * Math.cos(Math.PI/4);
 var dy = 5 * Math.sin(Math.PI/4);
 
 var moveDVD = () => {
+    if (stopped) {
+      x = Math.floor(Math.random() * (500-DVD.width));
+      y = Math.floor(Math.random() * (500-DVD.height));
+      dx = 5 * Math.cos(Math.PI/4);
+      dy = 5 * Math.sin(Math.PI/4);
+      stopped = false;
+    }
 
     console.log("moveDVD invoked...");
     
