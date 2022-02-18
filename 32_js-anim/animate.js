@@ -74,21 +74,21 @@ var y = Math.floor(Math.random() * (500-DVD.height));
 var dx = 5 * Math.cos(Math.PI/4);
 var dy = 5 * Math.sin(Math.PI/4);
 
-var moveDVD = () => {
-    if (stopped) {
-      x = Math.floor(Math.random() * (500-DVD.width));
-      y = Math.floor(Math.random() * (500-DVD.height));
-      dx = 5 * Math.cos(Math.PI/4);
-      dy = 5 * Math.sin(Math.PI/4);
-      stopped = false;
-    }
-
-    console.log("moveDVD invoked...");
-    
-    clear();
+var startDVD = () =>{
+    x = Math.floor(Math.random() * (c.width - DVD.width));
+    y = Math.floor(Math.random() * (c.height - DVD.height));
 
     window.cancelAnimationFrame(requestID);
     requestID = window.requestAnimationFrame(moveDVD);
+}
+
+var moveDVD = () => {
+    console.log("moveDVD invoked...");
+
+    window.cancelAnimationFrame(requestID);
+    requestID = window.requestAnimationFrame(moveDVD);
+
+    clear();
 
     ctx.drawImage(DVD, x, y, DVD.width,DVD.height);
 
@@ -105,4 +105,4 @@ var moveDVD = () => {
 
 dotButton.addEventListener("click", drawDot);
 stopButton.addEventListener("click", stopIt);
-movieButton.addEventListener("click", moveDVD);
+movieButton.addEventListener("click", startDVD);
