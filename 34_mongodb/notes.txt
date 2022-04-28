@@ -1,0 +1,4 @@
+data model restructuring => performance drops
+data model defined at the application level (what data application needs and application's read/write usage)
+to link or to embed?
+	- see if the data uses embedded information a lot
