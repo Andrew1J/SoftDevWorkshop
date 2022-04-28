@@ -1,4 +1,11 @@
 data model restructuring => performance drops
 data model defined at the application level (what data application needs and application's read/write usage)
-to link or to embed?
-	- see if the data uses embedded information a lot
+
+step by step iteration:
+- evaluate the application workload
+- map out entities and their relationships
+	- to link or to embed?
+		- one to one, many to one, many to many
+		- see if the data uses embedded information a lot
+- finalize the data model for each collection
+	- identify and apply relevant design patterns
